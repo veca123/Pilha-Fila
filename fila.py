@@ -11,17 +11,17 @@ class VetorFila:
         #Mostra o tamanho da fila
         return self._tamanho
 
-    def estavazia(self):          #Verifica se a fila esta vazia
+    def esta_vazia(self):          #Verifica se a fila esta vazia
         return self._tamanho == 0
 
     def primeiro(self):
-        if self.is_empty():
+        if self.esta_vazia():
             print('pilha vazia')
             return None
         else:
             return self._dado[self._frente]
     def dequeue(self):              #Remove um elemento da fila  
-        if self.estavazia():
+        if self.esta_vazia():
             print('fila vazia')
             return None  
         else:
@@ -49,8 +49,9 @@ fila.enqueue(7)
 fila.enqueue(8)
 fila.enqueue(9)
 fila.enqueue(10)
+fila.dequeue()
 
 print('tamanho da fila:',fila.__len__()) #Exibe o tamanho da fila
-while not fila.estavazia():
+while not fila.esta_vazia():
   print(fila.dequeue())
 print("Fila vazia")
