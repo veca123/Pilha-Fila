@@ -16,7 +16,7 @@ class VetorFila:
 
     def primeiro(self):
         if self.esta_vazia():
-            print('pilha vazia')
+            print('fila vazia')
             return None
         else:
             return self._dado[self._frente]
