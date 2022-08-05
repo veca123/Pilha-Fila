@@ -11,7 +11,7 @@ class VetorFila:
         #Mostra o tamanho da fila
         return self._tamanho
 
-    def estavazia(self):          #Verifica se a pilha esta vazia
+    def estavazia(self):          #Verifica se a fila esta vazia
         return self._tamanho == 0
 
     def primeiro(self):
