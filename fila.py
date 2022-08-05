@@ -19,7 +19,7 @@ class VetorFila:
             print('pilha vazia')
             return None
         else:
-            return self._data[self._frente]
+            return self._dado[self._frente]
     def dequeue(self):              #Remove um elemento da fila  
         if self.estavazia():
             print('fila vazia')
