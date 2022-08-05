@@ -14,21 +14,21 @@ class VetorPilha:
   def __len__(self):
     return len(self._dado)
 
-  def is_empty(self):
+  def esta_vazia(self):
     return len(self._dado) == 0
 
   def push(self, elemento):
     self._dado.append(elemento)                 
 
   def top(self):
-    if self.is_empty():
+    if self.esta_vazia():
       print('pilha vazia')
       return None
     else:
       return self._dado[-1]                 # o ultimo elemento da pilha
 
   def pop(self):
-    if self.is_empty():
+    if self.esta_vazia():
       print('pilha vazia')
       return None
     else:
@@ -39,10 +39,10 @@ if __name__ == '__main__':
     def ExibePilha(p):
         pilha_auxiliar = VetorPilha() # cria pilha auxiliar
         print('[', end="")
-        while(not p.is_empty()): # se a pilha nao ficar vazia
+        while(not p.esta_vazia()): # se a pilha nao ficar vazia
             print(p.top(), end=" ") # retorna o elemento do topo da pilha
             pilha_auxiliar.push(p.pop()) # coloca o elemento na pilha auxiliar
-        while(not pilha_auxiliar.is_empty()):
+        while(not pilha_auxiliar.esta_vazia()):
             p.push(pilha_auxiliar.pop())
         pilha_auxiliar = None
         print(']\n')
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     pilha.push(6)                        
     pilha.push(8)
     print("Retorna se a pilha esta cheia ou vazia:")                       
-    print(pilha.is_empty())             #se a pilha estiver cheia retorna falso e se a pilha estiver vazia retorna verdadeiro 
+    print(pilha.esta_vazia())             #se a pilha estiver cheia retorna falso e se a pilha estiver vazia retorna verdadeiro 
     print()
     pilha.pop()
     print("Retorna o elemento que está no topo da pilha")
